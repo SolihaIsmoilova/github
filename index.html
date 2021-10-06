@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<title>ABOUT JAPAN</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width,initial-scale=1">
+    <script type="text/javascript"src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet"type="text/css"href="./css/slick.css">
+    <link rel="stylesheet"type="text/css"href="./css/slick-theme.css">
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="header_inner">
+        <h1>
+            <img src="./images/logo.png"alt="ABOUT JAPAN">
+        </h1>
+        <ul class="">
+            <li><a href="#top">Top</a></li>
+        <li><a href="#population">Population</a></li>
+    <li><a href="#landarea">Land Area</a></li>
+<li><a href="#industories">Industories</a></li>
+<li><a href="#history">History</a></li>
+</ul>
+    </div>
+</header>
+<main>
+    <section id="top" class="section_content main_image">
+        <div class="slider">
+            <img class="animation" src="./images/main.png"alt="main visual">
+            <img class="animation"src="./images/main_02.png"alt="main visual">
+            <img class="animation"src="./images/main_03.png" alt="main visual">
+        </div>
+    </section>
+    <section id="population" class="section_content population">
+        <div class="section_inner">
+            <h2>Population.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="population_box">
+                <img class="animation" src="./images/population.png" alt="population">
+                <p>125,930,000<span>people<br>(2020,8)</span></p>
+            </div>
+        </div>
+    </section>
+    <section id="landarea" class="section_content landarea">
+        <div class="section_inner">
+            <h2>LandArea</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="landarea_box">
+                <img class="animation" src="./images/landarea.png" alt="landarea">
+                <p>145,936<span>aquare kilometers<br>(56,346,20 square miles)</span></p>
+            </div>
+        </div>
+    </section>
+    <section id="industories" class="section_content industories">
+        <div class="section_inner_02">
+            <h2>Industories</h2>
+            <div class="industories_inner">
+                <img class="animation" src="./images/industories.png" alt="industories">
+                <div class="industories_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="history" class="section_content history">
+        <div class="section_inner_02">
+            <h2>History</h2>
+            <div class="history_inner">
+                <div class="history_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <img class="animation" src="./images/history.png" alt="history">
+            </div>
+        </div>
+    </section>
+    </main>
+<footer>
+<div class="foooter_inner">
+    <img src="./images/footer_logo.png"alt="ABOUT JAPAN">
+    <P class="copyright">&copy;2020ABOUT JAPAN</P>
+</div>
+</footer>
+<script type="text/javascript">
+    $(function(){
+        $('a[href^="#"]').click(function(){
+            var speed=500;
+            var href=$(this).attr("href");
+            var target=$(href=="#"||href==""?'html':href);
+            var position=target.offset().top;
+            $("html,body").animate({scrollTop:position},speed,"swing");
+            return false;
+        });
+        $(window).on('load scroll',function(){
+            $('.animation').each(function(){
+                var target=$(this).offset().top;
+                var scroll=$(window).scrollTop();
+                var height=$(window).height();
+                if(scroll>target-height){
+                    $(this).addClass('active');
+                }
+            });
+        });
+    });
+    </script>
+<script>
+     $('.slider').slick({
+        infinite:true,
+        slidesToShow:1,
+        dots:true,
+        autoplay:true,
+        speed:300,
+    });
+</script>
+</body>
+</html>

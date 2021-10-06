@@ -1,0 +1,234 @@
+html{
+    background-color: #b7f7fc;
+}
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+ul.gnav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%; 
+}
+    ul.gnav li{
+        list-style: none;
+}
+  ul.gnav li a{
+      text-decoration: none;
+      color:#000333;
+  }
+  .main_image img{
+    width: 100%;
+  }
+  section.section_content {
+    padding: 20px 0;
+}
+.section_inner {
+    max-width: 720px;
+    margin: 50px auto;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section_inner p {
+    line-height: 200%;
+    text-align: justify;
+}
+.population_box {
+    background-color: #b7bec0;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.population_box p {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 110%;
+    letter-spacing: 2px;
+}
+.population_box p span {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+.landarea_box {
+    background-color: #b7bec0;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.landarea_box p {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 110%;
+    letter-spacing: 2px;
+    
+}
+.landarea_box p span {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+
+
+.industories_inner {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
+.industories_inner img {
+    width: 50%;
+}
+.industories_text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.industories_text p {
+    line-height: 200%;
+    padding-left: 50px;
+    text-align: justify;
+}
+
+
+
+.history_inner {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
+.history_inner img {
+    width: 50%;
+}
+.history_text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.history_text p {
+    line-height: 200%;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+
+footer {
+    background-color: #465B72;
+    padding: 50px 0;
+    margin-top: 50px;
+    text-align: center;
+}
+footer p.copyright {
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+   
+  
+   @media screen and (max-width:896px){
+       body{
+           background-color: #0000ff;
+        }
+        @media screen and (max-width:680px) {
+            body{
+                background-color:#00ff00;
+        }
+   } @media screen and (max-width:480px){
+    body{
+        background-color: #ff0000;
+    }
+}
+
+@media screen and (max-width:896px){
+    .industories_inner{
+        align-items: flex-start;
+    }
+    @media screen and (max-width:680px){
+        .history_inner{
+            align-items: flex-start;
+        }
+   @media screen and (max-width:680px){
+      .header_inner{
+          display: block;
+          text-align: center;
+      }
+      ul.gnav{
+          width: 100%;
+          padding: 0;
+      }
+      @media screen and (max-width:680px){
+           .section_inner{
+               width: 90%;
+           }
+           .population_box{
+               display: block;
+               text-align: center;
+               max-width: 90%;
+           }
+           }
+           .landarea_box{
+               display: block;
+               text-align: center;
+               max-width: 90%;
+           }
+        .industories_inner{
+    display: block;
+    max-width: 1200px;
+    margin: auto;
+}
+.industories_inner img {
+    width: 90%;
+    text-align: center;
+}
+.industories_text {
+    width: 90%;
+    display: block;
+    align-items: center;
+}
+.industories_text p {
+    line-height: 200%;
+    padding-left: 50px;
+    text-align: justify;
+}
+.industories_inner img{
+    width: 100%;
+}
+.history_inner{
+    width: 90%;
+}
+.history_text{
+    width: 100%;
+}
+.history_text p{
+    padding: 0;
+}
+.history_inner img{
+    width: 100%;
+}
+       }
+   }
+   
+   .animation{
+       opacity: 0;
+       visibility: hidden;
+       transition: 2s;
+       transform: translateY(50px);
+   }
+   .active{
+       opacity: 1;
+       visibility: visible;
+       transform: translateY(0);
+   }
